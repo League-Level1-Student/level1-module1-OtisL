@@ -2,7 +2,7 @@
 
 public class RaceCar {
 	private String brand;
-	private int positionInRace;
+	private double positionInRace;
 	public boolean damaged = false;
 	
 	/**
@@ -10,18 +10,18 @@ public class RaceCar {
 	 * @param brand Brand of race car
 	 * @param positionInRace Position of race car in the race
 	 */
-	public RaceCar(String brand, int positionInRace) {
+	public RaceCar(String brand, double positionInRace) {
 		System.out.println("Your " +brand +" race car has been created.");
 		if (positionInRace <= 0)
 			throw new IllegalArgumentException("The car's position cannot be negative.");
-		else if (positionInRace > 15) 
-			throw new IllegalArgumentException("There are only 15 cars in the race.");
+		else if (positionInRace > 30) 
+			throw new IllegalArgumentException("There are only 5000 cars in the race.");
 		
 		this.brand = brand;
 		this.positionInRace = positionInRace;
 	}
 	
-	public int getPositionInRace() {
+	public double getPositionInRace() {
 		return this.positionInRace;
 	}
 	
@@ -52,11 +52,11 @@ public class RaceCar {
 	 * Crashes the car. It falls back three positions and needs a pit stop.
 	 */
 	public void crash() {
-		positionInRace += 3;
-		if (positionInRace > 15) 
-			positionInRace = 15;
+		positionInRace += 500;
+		if (positionInRace > 5000) 
+			positionInRace = 5000;
 		damaged = true;
-		System.out.println("\nYour car has been damaged and needs a pit stop.\nThree cars zoomed by you.");
+		System.out.println("\nYour car has been damaged and needs a pit stop.\n500 cars cars cars cars cars cars cars cars cars cars cars cars cars cars cars cars cars zoomed by you.");
 	}
 	
 	/**

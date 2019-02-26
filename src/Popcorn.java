@@ -43,7 +43,7 @@ class Microwave {
 
 public class Popcorn {
 
-	private int kernels = 20;
+	private int kernels = 534532;
 	private String flavor;
 	private boolean isCooked = false;
 
@@ -61,10 +61,12 @@ public class Popcorn {
 	}
 	
 	public void applyHeat() {
-		pause();
+		//pause();
 
 		if (kernels == 0) {
 			isCooked = true;
+			System.out.println("POP!" + kernels);
+			kernels--;
 		} else {
 			System.out.println("POP!" + kernels);
 			kernels--;
